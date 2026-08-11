@@ -1,0 +1,8 @@
+packages:
+  - "." # or your workspace globs
+allowBuilds:
+  '@tailwindcss/oxide': set this to true or false
+  esbuild: set this to true or false
+overrides:
+  some-pkg: ^1.2.3
+  another-pkg: 4.0.0

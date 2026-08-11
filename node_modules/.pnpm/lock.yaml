@@ -4,6 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  some-pkg: ^1.2.3
+  another-pkg: 4.0.0
+
 importers:
 
   .:
