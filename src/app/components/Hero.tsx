@@ -15,11 +15,15 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-32">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-white">
-            <h1 className="font-serif mb-6" style={{ fontSize: '3.5rem', lineHeight: '1.1' }}>
+            <h1
+              className="font-serif mb-6"
+              style={{ fontSize: "3.5rem", lineHeight: "1.1" }}
+            >
               Find Your Holiday Home in Tenerife
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Azul de Canarias helps European buyers discover beautiful homes in Tenerife with guidance, clarity, and local support.
+              Azul de Canarias helps European buyers discover beautiful homes in
+              Tenerife with guidance, clarity, and local support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="px-8 py-4 bg-white text-primary rounded-full hover:bg-white/90 transition-all shadow-lg hover:shadow-xl">
@@ -40,7 +44,7 @@ export function Hero() {
                 </div>
                 <div className="h-px bg-white/20"></div>
                 <div>
-                  <div className="text-4xl font-serif mb-2">15+</div>
+                  <div className="text-4xl font-serif mb-2">9+</div>
                   <div className="text-white/80">Years of Experience</div>
                 </div>
                 <div className="h-px bg-white/20"></div>

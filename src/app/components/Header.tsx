@@ -1,5 +1,6 @@
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import logo from "/logo.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -9,21 +10,33 @@ export function Header() {
       <nav className="mx-auto max-w-7xl px-6 lg:px-8 py-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-serif">A</span>
+            <div className="w-30 h-30 rounded-full flex items-center justify-center">
+              <img
+                src={logo}
+                alt="Azul de canaras"
+                className="w-30 h-30 flex"
+              ></img>
             </div>
-            <span className="font-serif text-xl text-white">Azul de Canarias</span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#programs" className="text-white/90 hover:text-white transition-colors">
+            <a
+              href="#programs"
+              className="text-white/90 hover:text-white transition-colors"
+            >
               Programs for you
             </a>
-            <a href="#media" className="text-white/90 hover:text-white transition-colors">
+            <a
+              href="#media"
+              className="text-white/90 hover:text-white transition-colors"
+            >
               Media
             </a>
-            <a href="#contact" className="text-white/90 hover:text-white transition-colors">
+            <a
+              href="#contact"
+              className="text-white/90 hover:text-white transition-colors"
+            >
               Contact us
             </a>
           </div>
