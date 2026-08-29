@@ -48,7 +48,7 @@ export function HowItWorks() {
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-ocean-blue-light rounded-full mb-6 shadow-lg">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <div className="text-6xl font-serif text-accent mb-4 opacity-50">
+                  <div className="text-6xl font-serif text-ocean-blue-light mb-4">
                     {step.number}
                   </div>
                   <h3 className="font-serif mb-3" style={{ fontSize: '1.5rem' }}>
