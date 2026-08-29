@@ -1,32 +1,37 @@
-import { Facebook, Link2 } from "lucide-react";
+import { siAirbnb, siBookingdotcom, siFacebook } from "simple-icons";
 
 import { business, platforms, PROFILE_URL_TODO } from "../../content/site";
 
 /**
- * ⚠️ ICON_TODO — lucide-react carries a Facebook mark and nothing for
- * Booking.com or Airbnb, and simple-icons is not installed. Those two fall back
- * to a neutral link glyph rather than a guessed or hand-drawn brand mark.
+ * All three marks come from simple-icons so they share one geometry and one
+ * 24-unit grid. They are rendered in currentColor — mint, like everything else
+ * in this panel — rather than each platform's own brand colour, which would
+ * drag three unrelated palettes into the navy.
  *
- * All three render monochrome in mint, so the stack shares one visual language
- * instead of importing three brand palettes into the navy panel.
+ * simple-icons ships the paths under CC0; the marks themselves remain the
+ * platforms' trademarks and are used here only to identify her profiles.
  */
-const MARKS: Record<string, typeof Facebook> = {
-  facebook: Facebook,
-  booking: Link2,
-  airbnb: Link2,
+const MARKS: Record<string, { title: string; path: string }> = {
+  booking: siBookingdotcom,
+  airbnb: siAirbnb,
+  facebook: siFacebook,
 };
 
-/**
- * Contact. No form: this is a static site with nowhere to post to, and a form
- * would create a GDPR obligation for no benefit. Direct channels only.
- *
- * WhatsApp leads deliberately — it is how this audience makes first contact —
- * so it gets the solid button and everything else is a plain link.
- *
- * Two-tone split: she sits on the pale wash at roughly a third of the width and
- * bleeds off the left edge; the details, which are the functional content, take
- * the navy two thirds.
- */
+function PlatformMark({ path }: { path: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={18}
+      height={18}
+      fill="currentColor"
+      aria-hidden="true"
+      className="shrink-0 text-ocean-blue-pale"
+    >
+      <path d={path} />
+    </svg>
+  );
+}
+
 export function Contact() {
   return (
     <section
@@ -36,7 +41,9 @@ export function Contact() {
     >
       <div className="grid lg:grid-cols-[1fr_2fr]">
         {/* Portrait: no padding anywhere, so it runs to the page edge. Bottom
-            aligned, with the wash carrying the space above her. */}
+            aligned deliberately — centring it opens a wash gap beneath her at
+            1440 and she reads as floating rather than standing on the boundary.
+            The wash carries the space above her instead. */}
         <div className="flex items-end bg-sky-blue">
           <picture className="w-full">
             <source srcSet="/portrait.webp" type="image/webp" />
@@ -54,7 +61,10 @@ export function Contact() {
         </div>
 
         <div className="px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,17rem)] lg:gap-16">
+          {/* h-full so the inner grid takes the section's height rather than
+              just the details' — otherwise the list centres against the text
+              block and stays put as the section grows. */}
+          <div className="grid gap-14 lg:h-full lg:grid-cols-[minmax(0,1fr)_minmax(0,17rem)] lg:gap-16">
             <div>
           <h2
             id="contact-heading"
@@ -128,9 +138,12 @@ export function Contact() {
                 still PROFILE_URL_TODO, and an href="#" would look wired and
                 ship broken. On mobile these simply fall below the details —
                 nothing above them moves. */}
-            <ul className="space-y-4 lg:pt-2">
+            {/* Centred in the column rather than pushed down by a fixed
+                offset, so the start point tracks the column's height instead
+                of drifting as the viewport changes. */}
+            <ul className="space-y-4 lg:self-center">
               {platforms.map((platform) => {
-                const Mark = MARKS[platform.id] ?? Link2;
+                const mark = MARKS[platform.id];
                 const pending = platform.url === PROFILE_URL_TODO;
                 return (
                   <li
@@ -139,11 +152,7 @@ export function Contact() {
                     aria-disabled={pending || undefined}
                   >
                     <div className="flex items-center gap-3">
-                      <Mark
-                        size={18}
-                        aria-hidden="true"
-                        className="shrink-0 text-ocean-blue-pale"
-                      />
+                      {mark ? <PlatformMark path={mark.path} /> : null}
                       <span className="text-sm font-semibold uppercase tracking-[0.12em] text-white">
                         {platform.name}
                       </span>
