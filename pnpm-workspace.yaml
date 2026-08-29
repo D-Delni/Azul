@@ -3,6 +3,3 @@ packages:
 allowBuilds:
   "@tailwindcss/oxide": true
   esbuild: true
-overrides:
-  some-pkg: ^1.2.3
-  another-pkg: 4.0.0
