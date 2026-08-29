@@ -25,10 +25,10 @@ export function Hero() {
               Azul de Canarias helps European buyers discover beautiful homes in
               Tenerife with guidance, clarity, and local support.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 ">
               <a
                 href="#contact"
-                className="inline-block px-8 py-4 bg-white text-primary rounded-full hover:bg-white/90 transition-all shadow-lg hover:shadow-xl"
+                className="inline-block px-8 py-4 bg-white text-primary rounded-full hover:bg-white/90 transition-all shadow-lg hover:shadow-xl text-center"
               >
                 Start Your Journey
               </a>

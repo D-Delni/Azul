@@ -44,7 +44,7 @@ export function Contact() {
             panel's height comes from the navy column beside it — this column
             is a stretched grid item with no height of its own — so there is a
             box to centre her within. */}
-        <div className="flex items-center bg-sky-blue">
+        <div className="flex items-center bg-ocean-blue">
           <picture className="w-full">
             <source srcSet="/portrait.webp" type="image/webp" />
             <img
@@ -88,48 +88,48 @@ export function Contact() {
               would drift at other viewport sizes. */}
           <div className="mt-14 grid items-start gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,17rem)] lg:gap-16">
             <dl className="max-w-md space-y-6">
-            <div className="border-t border-white/15 pt-6">
-              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-ocean-blue-pale">
-                Phone
-              </dt>
-              <dd className="mt-2">
-                <a
-                  href={business.phoneHref}
-                  className="text-white underline-offset-4 hover:underline"
-                >
-                  {business.phoneDisplay}
-                </a>
-              </dd>
-            </div>
+              <div className="border-t border-white/15 pt-6">
+                <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-ocean-blue-pale">
+                  Phone
+                </dt>
+                <dd className="mt-2">
+                  <a
+                    href={business.phoneHref}
+                    className="text-white underline-offset-4 hover:underline"
+                  >
+                    {business.phoneDisplay}
+                  </a>
+                </dd>
+              </div>
 
-            <div className="border-t border-white/15 pt-6">
-              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-ocean-blue-pale">
-                Email
-              </dt>
-              <dd className="mt-2">
-                <a
-                  href={`mailto:${business.email}`}
-                  className="text-white underline-offset-4 hover:underline"
-                >
-                  {business.email}
-                </a>
-              </dd>
-            </div>
+              <div className="border-t border-white/15 pt-6">
+                <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-ocean-blue-pale">
+                  Email
+                </dt>
+                <dd className="mt-2">
+                  <a
+                    href={`mailto:${business.email}`}
+                    className="text-white underline-offset-4 hover:underline"
+                  >
+                    {business.email}
+                  </a>
+                </dd>
+              </div>
 
-            <div className="border-t border-white/15 pt-6">
-              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-ocean-blue-pale">
-                Office
-              </dt>
-              <dd className="mt-2">
-                <address className="not-italic leading-relaxed text-white/85">
-                  {business.addressLines.map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
-                </address>
-              </dd>
-            </div>
+              <div className="border-t border-white/15 pt-6">
+                <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-ocean-blue-pale">
+                  Office
+                </dt>
+                <dd className="mt-2">
+                  <address className="not-italic leading-relaxed text-white/85">
+                    {business.addressLines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </address>
+                </dd>
+              </div>
             </dl>
 
             {/* Platform profiles. Inert elements, not anchors: every url is
