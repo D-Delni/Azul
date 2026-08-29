@@ -3,16 +3,15 @@
 :root {
   --font-size: 16px;
 
-  /* Ocean-inspired color palette */
-  --ocean-blue: #0A5F7F;
-  --ocean-blue-light: #1A8BB3;
-  --ocean-blue-pale: #B8E1F0;
-  --sky-blue: #E8F4F8;
+  /* Brand palette — sampled from the Azul de Canarias brand PDFs.
+     These are the source of truth for colour; do not adjust by eye. */
+  --ocean-blue: #123C5A;        /* deep navy: rules, footer band, primary */
+  --ocean-blue-light: #159CB3;  /* teal accent bar */
+  --ocean-blue-pale: #DBFAF4;   /* mint, from the logo block */
+  --sky-blue: #EDF6F8;          /* pale wash: header, quote blocks, panels */
   --white: #FFFFFF;
-  --sand-beige: #F5F1ED;
-  --sand-accent: #D4C5B9;
-  --text-dark: #1E3A4C;
-  --text-muted: #5A7A8A;
+  --text-dark: #26343D;         /* body slate */
+  --text-muted: #53616B;        /* muted subtitle */
 
   --background: var(--white);
   --foreground: var(--text-dark);
@@ -24,24 +23,24 @@
   --primary-foreground: var(--white);
   --secondary: var(--sky-blue);
   --secondary-foreground: var(--ocean-blue);
-  --muted: var(--sand-beige);
+  --muted: var(--sky-blue);
   --muted-foreground: var(--text-muted);
   --accent: var(--ocean-blue-pale);
   --accent-foreground: var(--ocean-blue);
   --destructive: #d4183d;
   --destructive-foreground: var(--white);
-  --border: rgba(10, 95, 127, 0.1);
+  --border: rgba(18, 60, 90, 0.12);
   --input: transparent;
   --input-background: var(--sky-blue);
-  --switch-background: var(--sand-accent);
+  --switch-background: var(--ocean-blue-pale);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --ring: var(--ocean-blue-light);
   --chart-1: var(--ocean-blue);
   --chart-2: var(--ocean-blue-light);
   --chart-3: var(--ocean-blue-pale);
-  --chart-4: var(--sand-accent);
-  --chart-5: var(--text-muted);
+  --chart-4: var(--text-muted);
+  --chart-5: var(--ocean-blue-pale);
   --radius: 1rem;
   --sidebar: var(--white);
   --sidebar-foreground: var(--text-dark);
@@ -96,8 +95,6 @@
   --color-ocean-blue-light: var(--ocean-blue-light);
   --color-ocean-blue-pale: var(--ocean-blue-pale);
   --color-sky-blue: var(--sky-blue);
-  --color-sand-beige: var(--sand-beige);
-  --color-sand-accent: var(--sand-accent);
   --color-text-dark: var(--text-dark);
   --color-text-muted: var(--text-muted);
 

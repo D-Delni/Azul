@@ -3,3 +3,10 @@ packages:
 allowBuilds:
   "@tailwindcss/oxide": true
   esbuild: true
+
+# lucide-react and other React-peered packages pull @types/react through a
+# floating range that resolves to v19, which conflicts with our React 18
+# types — every icon then fails typecheck as an invalid JSX component.
+# Pin a single copy tree-wide.
+overrides:
+  "@types/react": 18.3.12
