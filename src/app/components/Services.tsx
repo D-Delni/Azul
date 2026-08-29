@@ -14,7 +14,10 @@ export function Services() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-14 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-20">
           {/* Heading column */}
-          <div className="lg:sticky lg:top-32 lg:self-start">
+          {/* Not sticky. With nine rows the list runs well past the heading,
+              and pinning it leaves the heading stranded at the top for most of
+              the section's scroll. It reads better travelling with the page. */}
+          <div className="lg:self-start">
             <h2
               // fonts.css sets h1-h6 to the serif in an UNLAYERED rule, which beats
               // every Tailwind utility regardless of specificity. Inline style is
@@ -60,6 +63,15 @@ export function Services() {
                 </li>
               ))}
             </ul>
+
+            {/* The section's summary, not a tenth service — held apart by the
+                accent rule and set at reading size rather than as a list row. */}
+            <p className="mt-16 max-w-2xl border-t-2 border-ocean-blue-light pt-10 text-lg leading-relaxed text-primary">
+              One trusted point of contact in Tenerife for Real Estate, Property
+              Management, Residency &amp; Work Documentation, Accounting &amp;
+              Tax Assistance, Banking, Mortgages, and comprehensive client
+              support.
+            </p>
           </div>
         </div>
       </div>

@@ -40,11 +40,11 @@ export function Contact() {
       className="relative overflow-hidden bg-ocean-blue"
     >
       <div className="grid lg:grid-cols-[1fr_2fr]">
-        {/* Portrait: no padding anywhere, so it runs to the page edge. Bottom
-            aligned deliberately — centring it opens a wash gap beneath her at
-            1440 and she reads as floating rather than standing on the boundary.
-            The wash carries the space above her instead. */}
-        <div className="flex items-end bg-sky-blue">
+        {/* Portrait: no padding anywhere, so it runs to the page edge. The
+            panel's height comes from the navy column beside it — this column
+            is a stretched grid item with no height of its own — so there is a
+            box to centre her within. */}
+        <div className="flex items-center bg-sky-blue">
           <picture className="w-full">
             <source srcSet="/portrait.webp" type="image/webp" />
             <img
@@ -61,11 +61,6 @@ export function Contact() {
         </div>
 
         <div className="px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
-          {/* h-full so the inner grid takes the section's height rather than
-              just the details' — otherwise the list centres against the text
-              block and stays put as the section grows. */}
-          <div className="grid gap-14 lg:h-full lg:grid-cols-[minmax(0,1fr)_minmax(0,17rem)] lg:gap-16">
-            <div>
           <h2
             id="contact-heading"
             // See BlueThatConnects: the global h1-h6 serif rule is unlayered,
@@ -88,7 +83,11 @@ export function Contact() {
             Message me on WhatsApp
           </a>
 
-          <dl className="mt-14 max-w-md space-y-6">
+          {/* Details and platform cards are two items in one grid row, so
+              their tops align by construction rather than by an offset that
+              would drift at other viewport sizes. */}
+          <div className="mt-14 grid items-start gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,17rem)] lg:gap-16">
+            <dl className="max-w-md space-y-6">
             <div className="border-t border-white/15 pt-6">
               <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-ocean-blue-pale">
                 Phone
@@ -131,24 +130,24 @@ export function Contact() {
                 </address>
               </dd>
             </div>
-          </dl>
-            </div>
+            </dl>
 
             {/* Platform profiles. Inert elements, not anchors: every url is
                 still PROFILE_URL_TODO, and an href="#" would look wired and
                 ship broken. On mobile these simply fall below the details —
                 nothing above them moves. */}
-            {/* Centred in the column rather than pushed down by a fixed
-                offset, so the start point tracks the column's height instead
-                of drifting as the viewport changes. */}
-            <ul className="space-y-4 lg:self-center">
+            <ul className="space-y-4">
               {platforms.map((platform) => {
                 const mark = MARKS[platform.id];
                 const pending = platform.url === PROFILE_URL_TODO;
                 return (
                   <li
                     key={platform.id}
-                    className="border border-white/15 p-5"
+                    /* lg:pt-6 rather than p-5 at the top: the details rows
+                       open with a 1px rule plus pt-6, so this puts their first
+                       labels on the same y instead of 4px apart. Desktop only —
+                       mobile keeps the even padding it already had. */
+                    className="border border-white/15 p-5 lg:pt-6"
                     aria-disabled={pending || undefined}
                   >
                     <div className="flex items-center gap-3">

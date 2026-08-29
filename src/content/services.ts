@@ -1,11 +1,3 @@
-/**
- * Services shown in the #services section.
- *
- * This is the same shape the property listings will use in the next batch:
- * a typed array exported from src/content/, rendered by a component that
- * knows nothing about the copy. To change what the site says, edit this
- * file — not the component.
- */
 export type Service = {
   /** Stable key. Also usable as an anchor fragment if we deep-link a service. */
   id: string;
@@ -16,40 +8,65 @@ export type Service = {
 };
 
 /**
- * ⚠️ PLACEHOLDER CONTENT — NOT FINAL COPY. DO NOT SHIP.
+ * "autónomos", "empadronamiento" and "NIE" stay in the original — they are the
+ * terms this audience searches for, and translating them loses precision.
  *
- * The four real services derive from her professional background in Law,
- * Journalism, Mediation and Sales, plus 9 years in Tenerife. That copy is
- * still being written.
- *
- * These entries exist only to test the layout at realistic text lengths:
- * a 2-4 word title and 2-3 sentences of description each. They are marked
- * TODO on purpose so nothing here can be mistaken for finished wording.
- * Replace the title and description of each entry and delete this notice.
+ * Voice note: these read "we", from the source copy, while the rest of the site
+ * is first person singular. See the voice section of CLAUDE.md.
  */
 export const services: Service[] = [
   {
-    id: "service-1",
-    title: "TODO — service title one",
+    id: "property-sales",
+    title: "Property Sales",
     description:
-      "TODO — description for the first service. This placeholder is written to roughly the length of the real copy, two to three sentences, so the column width and the vertical rhythm of the list are tested honestly before the final text arrives.",
+      "We value the property, position it for the market and produce the marketing materials, then promote it across the major platforms and social media. We identify buyers and run the viewings. We negotiate and stay with the sale through to completion and the signing before the notary.",
   },
   {
-    id: "service-2",
-    title: "TODO — service title two",
+    id: "long-term-rentals",
+    title: "Long-Term Rentals",
     description:
-      "TODO — description for the second service. Kept to the same length as the others so the rows read as an even stack. Real wording will come from her own words rather than being drafted here.",
+      "We market the property, select the tenant, prepare the rental agreement, document the inventory and handle the handover. We stay available throughout the tenancy.",
   },
   {
-    id: "service-3",
-    title: "TODO — service title three",
+    id: "vacation-rentals",
+    title: "Vacation Rentals",
     description:
-      "TODO — description for the third service. Long enough to wrap onto three lines at the desktop column width and rather more on mobile, which is the case worth checking.",
+      "We prepare and promote the property, manage reservations and guest communication, and handle check-in and check-out. We coordinate cleaning and maintenance, and work to keep occupancy high while staying compliant with local regulations.",
   },
   {
-    id: "service-4",
-    title: "TODO — service title four",
+    id: "property-management",
+    title: "Property Management",
     description:
-      "TODO — description for the fourth service. The last row carries no bottom border, so this entry is the one to look at when checking the spacing below the list.",
+      "We manage the property day to day on the owner's behalf: rent and payments, bills and utilities, periodic inspections, cleaning, repairs, maintenance, and resolving issues as they arise. It suits owners who do not live permanently in Tenerife.",
+  },
+  {
+    id: "residency-documentation",
+    title: "Residency & Work Documentation",
+    description:
+      "We handle NIE applications, residency procedures, empadronamiento, Social Security registration and the other formalities needed to live or work in Tenerife. Where a procedure requires an authorised professional, we coordinate with the appropriate specialist.",
+  },
+  {
+    id: "accounting-tax",
+    title: "Accounting & Tax",
+    description:
+      "For individuals, autónomos and companies: accounting documentation, invoicing, tax returns, property and rental taxes, business taxation and other fiscal obligations. We work in collaboration with accounting and tax professionals.",
+  },
+  {
+    id: "banking-mortgages",
+    title: "Banking & Mortgages",
+    description:
+      "We help open a Spanish bank account and prepare the documentation it requires. We also assist in obtaining mortgage financing for a purchase.",
+  },
+  {
+    id: "utilities-insurance",
+    title: "Utilities & Insurance",
+    description:
+      "We arrange water and electricity contracts, and insurance.",
+  },
+  {
+    id: "translations-renovations",
+    title: "Translations, Renovations & Preparation",
+    description:
+      "We arrange translation, renovation and maintenance work, and prepare a property for sale or rental.",
   },
 ];

@@ -44,8 +44,15 @@ invented and are deleted; do not reintroduce warmth.
 
 ## Voice
 
-First person singular. She is one agent, not a company — never "we", "our
-team", "our experts". The audience is Romanian buyers looking at Tenerife.
+UNRESOLVED — the site is currently split, pending a decision.
+
+Services uses "we", from her own source copy. Everything else is first person
+singular: the Services heading is "YOUR PROPERTY. YOUR NEEDS. MY EXPERTISE.",
+the contact CTA is "Message me on WhatsApp", and the contact section is built
+around her portrait. CTA and HowItWorks already said "we" before this.
+
+Until it is settled, do not "fix" either side towards the other — flag it.
+The audience is Romanian buyers looking at Tenerife.
 No "dream home", "seamless", "your journey", "trusted partner". If a
 sentence could appear on any agent's site, rewrite it.
 
