@@ -6,74 +6,84 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50">
-      <nav className="mx-auto max-w-7xl px-6 lg:px-8 py-6">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-30 h-30 rounded-full flex items-center justify-center">
-              <img
-                src={logo}
-                alt="Azul de canaras"
-                className="w-30 h-30 flex"
-              ></img>
-            </div>
-          </div>
+    <header className="sticky top-0 z-50 bg-sky-blue/75 backdrop-blur-sm border-b border-border">
+      <nav aria-label="Main" className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="flex items-center justify-between py-4">
+          <a href="#top" className="flex items-center">
+            <img
+              src={logo}
+              alt="Azul de Canarias"
+              width={315}
+              height={200}
+              /* Height-constrained so the 1.575 landscape ratio is preserved;
+                 shrinks on scroll via the header's own padding, CSS only. */
+              className="h-14 w-auto object-contain md:h-16"
+            />
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <a
-              href="#programs"
-              className="text-white/90 hover:text-white transition-colors"
+              href="#services"
+              className="text-text-dark hover:text-primary transition-colors"
             >
-              Programs for you
+              Services
             </a>
             <a
-              href="#media"
-              className="text-white/90 hover:text-white transition-colors"
+              href="#properties"
+              className="text-text-dark hover:text-primary transition-colors"
             >
-              Media
+              Properties
             </a>
             <a
               href="#contact"
-              className="text-white/90 hover:text-white transition-colors"
+              className="text-text-dark hover:text-primary transition-colors"
             >
-              Contact us
+              Contact
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-white p-2"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            className="md:hidden text-text-dark p-2"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? (
+              <X size={24} aria-hidden="true" />
+            ) : (
+              <Menu size={24} aria-hidden="true" />
+            )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg">
-            <div className="flex flex-col gap-4 px-6">
+          <div id="mobile-menu" className="md:hidden pb-4">
+            <div className="flex flex-col gap-4 border-t border-border pt-4">
               <a
-                href="#programs"
+                href="#services"
                 className="text-text-dark hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Programs for you
+                Services
               </a>
               <a
-                href="#media"
+                href="#properties"
                 className="text-text-dark hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Media
+                Properties
               </a>
               <a
                 href="#contact"
                 className="text-text-dark hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact us
+                Contact
               </a>
             </div>
           </div>

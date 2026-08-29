@@ -26,9 +26,12 @@ export function Hero() {
               Tenerife with guidance, clarity, and local support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-white text-primary rounded-full hover:bg-white/90 transition-all shadow-lg hover:shadow-xl">
+              <a
+                href="#contact"
+                className="inline-block px-8 py-4 bg-white text-primary rounded-full hover:bg-white/90 transition-all shadow-lg hover:shadow-xl"
+              >
                 Start Your Journey
-              </button>
+              </a>
               <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full hover:bg-white/10 transition-all">
                 Explore Properties
               </button>
