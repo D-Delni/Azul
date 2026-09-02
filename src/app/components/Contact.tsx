@@ -46,9 +46,9 @@ export function Contact() {
             box to centre her within. */}
         <div className="flex items-center bg-ocean-blue">
           <picture className="w-full">
-            <source srcSet="/portrait.webp" type="image/webp" />
+            <source srcSet="/oficinaB.webp" type="image/webp" />
             <img
-              src="/portrait.jpg"
+              src="/oficinaB.jpg"
               /* NAME_TODO — this alt should name her once her name is known. */
               alt="The agent behind Azul de Canarias"
               width={640}

@@ -1,0 +1,126 @@
+{
+  "_comment": [
+    "SAMPLE DATA — all six entries below are invented placeholders written to give",
+    "the grid something to render. Real Tenerife locations, plausible prices, but",
+    "none of these listings exist. Replace every one of them before launch.",
+    "",
+    "price is a bare number and means: total (sale), per month (long-term),",
+    "per night (vacation). Never write a currency symbol or a unit into this file —",
+    "formatPrice() in properties.ts derives all of that from category.",
+    "",
+    "images hold the .jpg path; the matching .webp sits beside it and is derived",
+    "by webpFor(). See the README section 'Adding a property'.",
+    "",
+    "Run `pnpm validate:properties` after every edit."
+  ],
+  "properties": [
+    {
+      "id": "las-americas-2b-terraza",
+      "category": "sale",
+      "title": "Two-bedroom with a south terrace",
+      "location": "Las Américas",
+      "price": 285000,
+      "currency": "EUR",
+      "sqm": 78,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "images": [
+        "/properties/las-americas-2b-terraza/01.jpg",
+        "/properties/las-americas-2b-terraza/02.jpg"
+      ],
+      "description": "A corner flat on the fourth floor, with a terrace that gets sun from late morning until it goes down behind Los Cristianos. The block has a lift, a pool and a garage space included in the price. Ten minutes on foot to the promenade.",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": "costa-adeje-3b-vistas-mar",
+      "category": "sale",
+      "title": "Three bedrooms above the coast road",
+      "location": "Costa Adeje",
+      "price": 495000,
+      "currency": "EUR",
+      "sqm": 112,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "images": [
+        "/properties/costa-adeje-3b-vistas-mar/01.jpg",
+        "/properties/costa-adeje-3b-vistas-mar/02.jpg"
+      ],
+      "description": "Built in 2019 and lived in for two summers, so it still reads as new. The main bedroom and the living room both open onto the same long balcony facing La Gomera. Community fees are 95 € a month and cover the pool and the gardens.",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": "los-cristianos-1b-centro",
+      "category": "long-term",
+      "title": "One bedroom, two streets from the harbour",
+      "location": "Los Cristianos",
+      "price": 1200,
+      "currency": "EUR",
+      "sqm": 52,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "images": [
+        "/properties/los-cristianos-1b-centro/01.jpg",
+        "/properties/los-cristianos-1b-centro/02.jpg"
+      ],
+      "description": "Furnished, on a quiet interior street in the old part of town. Water and community fees are included in the rent; electricity is not. Minimum twelve months, two months deposit.",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "la-laguna-3b-casco-antiguo",
+      "category": "long-term",
+      "title": "Three bedrooms in the old quarter",
+      "location": "La Laguna",
+      "price": 1450,
+      "currency": "EUR",
+      "sqm": 95,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "images": [
+        "/properties/la-laguna-3b-casco-antiguo/01.jpg",
+        "/properties/la-laguna-3b-casco-antiguo/02.jpg"
+      ],
+      "description": "The first floor of a restored house inside the protected centre, with the original wooden ceilings left exposed. Unfurnished, gas heating, an internal patio the flat has to itself. Fifteen minutes from the university, which is who usually takes it.",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "el-medano-2b-frente-playa",
+      "category": "vacation",
+      "title": "Two bedrooms facing Playa Grande",
+      "location": "El Médano",
+      "price": 95,
+      "currency": "EUR",
+      "sqm": 64,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "images": [
+        "/properties/el-medano-2b-frente-playa/01.jpg",
+        "/properties/el-medano-2b-frente-playa/02.jpg"
+      ],
+      "description": "Second floor, no lift, and the beach starts across the road. Sleeps four, with board storage in the entrance hall for the wind that brings most people here. Registered as vivienda vacacional; the licence number goes on every listing.",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": "puerto-de-la-cruz-1b-taoro",
+      "category": "vacation",
+      "title": "One bedroom below the Taoro gardens",
+      "location": "Puerto de la Cruz",
+      "price": 70,
+      "currency": "EUR",
+      "sqm": 38,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "images": [
+        "/properties/puerto-de-la-cruz-1b-taoro/01.jpg",
+        "/properties/puerto-de-la-cruz-1b-taoro/02.jpg"
+      ],
+      "description": "Small, quiet and cheap to run, on the slope between the gardens and the Lago Martiánez. Sleeps two, with a kitchen that works for longer winter stays rather than a weekend. Currently blocked out for a refurbishment of the bathroom.",
+      "featured": false,
+      "available": false
+    }
+  ]
+}
